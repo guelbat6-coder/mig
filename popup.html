@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Limpador de Conversas</title>
+  <style>
+    body { width: 320px; margin: 0; padding: 16px; font: 14px/1.4 system-ui, sans-serif; color: #111; }
+    h1 { font-size: 16px; margin: 0 0 4px; }
+    p.sub { margin: 0 0 12px; color: #555; font-size: 12px; }
+    label { display: block; margin: 6px 0; cursor: pointer; }
+    button { width: 100%; padding: 10px; margin-top: 8px; border: 0; border-radius: 8px; font-size: 14px; cursor: pointer; }
+    #start { background: #128c7e; color: #fff; }
+    #stop { background: #e5e7eb; color: #111; display: none; }
+    button:disabled { opacity: .5; cursor: not-allowed; }
+    #status { margin-top: 12px; padding: 8px; background: #f3f4f6; border-radius: 8px; font-size: 12px; min-height: 18px; }
+    .warn { font-size: 11px; color: #92400e; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Limpador de Conversas</h1>
+  <p class="sub">Funciona no WhatsApp Web (web.whatsapp.com).</p>
+
+  <label><input type="radio" name="mode" value="clear" checked />
+    Limpar mensagens (a conversa continua na lista)</label>
+  <label><input type="radio" name="mode" value="delete" />
+    Apagar conversa da lista</label>
+
+  <button id="start">Iniciar limpeza</button>
+  <button id="stop">Parar</button>
+  <div id="status">Pronto.</div>
+  <p class="warn">Seus contatos do celular nunca são apagados. As mensagens removidas não podem ser recuperadas.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

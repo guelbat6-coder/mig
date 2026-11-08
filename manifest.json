@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Limpador de Conversas do WhatsApp Web",
+  "version": "1.0.0",
+  "description": "Limpa as mensagens das conversas do WhatsApp Web sem apagar seus contatos.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "action": {
+    "default_title": "Limpador de Conversas",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
